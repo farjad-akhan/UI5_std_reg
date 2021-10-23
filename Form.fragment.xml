@@ -1,0 +1,23 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout">
+    <Dialog
+        id="submitDialog" 
+    title= "Please provid your details">
+    <l:VerticalLayout class="sapUiContentPadding" width="100%">
+    <Label required="true" text="Name" design="Bold"/>
+    <Input value="{Main>/formData/name}" />
+    <Label required="true" text="Register no." design="Bold"/>
+    <Input value="{Main>/formData/reg_no}"/>
+    <Label required="true" text="Email" design="Bold"/>
+    <Input value="{Main>/formData/email}"/>
+</l:VerticalLayout>
+    <beginButton>
+        <Button
+        text="{i18n>dialogCloseButtonText}"
+        press=".onCloseDialog"/>
+    </beginButton>
+</Dialog>
+
+</core:FragmentDefinition>

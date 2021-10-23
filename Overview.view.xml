@@ -1,0 +1,78 @@
+<mvc:View
+    controllerName="UI5_new.controller.Overview"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:table="sap.m.table"
+	displayBlock="true">
+	<Shell>
+        <App>
+            <pages>
+              
+
+                <Page title="{i18n>homePageTitle}">
+                    <l:VerticalLayout class="sapUiContentPadding" width="100%">
+                    <Table 
+                    inset="false"
+                    items="{
+                        path: 'Main>/tableData'
+                    }">
+                    <headerToolbar>
+                        <OverflowToolbar >
+                            <Title text="Students Details" level="H2" />
+                            <ToolbarSpacer />
+                            <Button  icon="sap-icon://add-employee"  type="Emphasized"
+                                press=".onAdd" />
+                        </OverflowToolbar>
+                    </headerToolbar>
+                    <columns>
+                        <Column
+                        minScreenWidth="Desktop"
+				        demandPopin="true"
+				        hAlign="Center">
+                        <Text text="Delete"/>
+                    </Column>
+                        <Column
+                        minScreenWidth="Desktop"
+				        demandPopin="true"
+				        hAlign="Center">
+                        <Text text="Name"/>
+                    </Column>
+                    <Column
+                        minScreenWidth="Desktop"
+				        demandPopin="true"
+				        hAlign="Center">
+                        <Text text="Register No."/>
+                    </Column>
+                    <Column
+                        minScreenWidth="Desktop"
+				        demandPopin="true"
+				        hAlign="Center">
+                        <Text text="Email"/>
+                    </Column>
+                    <Column
+                        minScreenWidth="Desktop"
+				        demandPopin="true"
+				        hAlign="Center">
+                        <Text text="Edit"/>
+                    </Column>
+                    </columns>
+                    <ColumnListItem>
+                        <cells>
+                            <Button icon="sap-icon://delete" press=".deleteBtn" type="Reject"></Button>
+                            <Text text="{Main>name}"/>
+                            <Text text="{Main>reg_no}"/>
+                            <Text text="{Main>email}"/>
+                                <Button icon="sap-icon://edit" press=".deleteBtn "></Button>
+                        </cells>
+                    </ColumnListItem>
+                </Table>
+            </l:VerticalLayout>
+                </Page>
+            
+            </pages>
+        </App>
+    </Shell>
+		
+</mvc:View>
